@@ -6,7 +6,7 @@ import Tooltip from "./Tooltip";
 const App = () => {
   return (
     <div>
-        <Tooltip tip1={"This is tooltip."} tip2= {"This is another tooltip."}/>
+        <Tooltip tip1={"This is tooltip"} tip2={"This is another tooltip"} />
     </div>
   )
 }

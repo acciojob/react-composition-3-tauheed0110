@@ -6,15 +6,12 @@ const Tooltip = ({ tip1, tip2 }) => {
     const [mouseEnterH, setMouseEnterH] = useState(false);
     const [mouseEnterP, setMouseEnterP] = useState(false);
 
-    const tip1Style = { visibility: mouseEnterH ? "visible" : "hidden", backgroundColor: "red", color: "white", padding: "20px", maxWidth: "120px", borderRadius: "10px" };
-    const tip2Style = { visibility: mouseEnterP ? "visible" : "hidden", backgroundColor: "red", color: "white", padding: "20px", maxWidth: "120px", borderRadius: "10px" };
-
     return (
         <div>
-            <div className='tooltip' style={tip1Style}>{tip1}</div>
-            <h2 className='tooltiptext' style={{ margin: "2rem 0rem 4rem 0rem" }} onMouseEnter={() => setMouseEnterH(true)} onMouseLeave={() => setMouseEnterH(false)}>Hover me</h2>
-            <div  className='tooltip' style={tip2Style}>{tip2}</div>
-            <p className='tooltiptext' onMouseEnter={() => setMouseEnterP(true)} onMouseLeave={() => setMouseEnterP(false)}>Hover me to see anoother tooltip.</p>
+            <div style={{ visibility: mouseEnterH ? "visible" : "hidden"}} className="tooltip">{tip1}</div>
+            <h2 className="tooltiptext" onMouseEnter={() => setMouseEnterH(true)} onMouseLeave={()=>setMouseEnterH(false)}>Hover over me</h2>
+            <div style={{ visibility: mouseEnterP ? "visible" : "hidden"}} className="tooltip">{tip2}</div>
+            <p className="tooltiptext" onMouseEnter={() => setMouseEnterP(true)} onMouseLeave={()=>setMouseEnterP(false)}>Hover me to see another tooltip.</p>
         </div>
     );
 }
