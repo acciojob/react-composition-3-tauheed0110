@@ -6,8 +6,8 @@ const Tooltip = ({ tip1, tip2 }) => {
     const [mouseEnterH, setMouseEnterH] = useState(false);
     const [mouseEnterP, setMouseEnterP] = useState(false);
 
-    const tip1Style = { display: mouseEnterH ? "block" : "none", backgroundColor: "red", color: "white", padding: "20px", maxWidth: "120px", borderRadius: "10px" };
-    const tip2Style = { display: mouseEnterP ? "block" : "none", backgroundColor: "red", color: "white", padding: "20px", maxWidth: "120px", borderRadius: "10px" };
+    const tip1Style = { visibility: mouseEnterH ? "visible" : "hidden", backgroundColor: "red", color: "white", padding: "20px", maxWidth: "120px", borderRadius: "10px" };
+    const tip2Style = { visibility: mouseEnterP ? "visible" : "hidden", backgroundColor: "red", color: "white", padding: "20px", maxWidth: "120px", borderRadius: "10px" };
 
     return (
         <div>
