@@ -11,10 +11,10 @@ const Tooltip = ({ tip1, tip2 }) => {
 
     return (
         <div>
-            <div style={tip1Style}>{tip1}</div>
-            <h1 style={{ margin: "2rem 0rem 4rem 0rem" }} onMouseEnter={() => setMouseEnterH(true)} onMouseLeave={() => setMouseEnterH(false)}>Hover me</h1>
-            <div style={tip2Style}>{tip2}</div>
-            <p onMouseEnter={() => setMouseEnterP(true)} onMouseLeave={() => setMouseEnterP(false)}>Hover me to see anoother tooltip.</p>
+            <div className='tooltip' style={tip1Style}>{tip1}</div>
+            <h2 className='tooltiptext' style={{ margin: "2rem 0rem 4rem 0rem" }} onMouseEnter={() => setMouseEnterH(true)} onMouseLeave={() => setMouseEnterH(false)}>Hover me</h2>
+            <div  className='tooltip' style={tip2Style}>{tip2}</div>
+            <p className='tooltiptext' onMouseEnter={() => setMouseEnterP(true)} onMouseLeave={() => setMouseEnterP(false)}>Hover me to see anoother tooltip.</p>
         </div>
     );
 }
