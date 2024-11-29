@@ -8,9 +8,9 @@ const Tooltip = ({ tip1, tip2 }) => {
 
     return (
         <div>
-            <div style={{ visibility: mouseEnterH ? "visible" : "hidden"}} className="tooltip">{tip1}</div>
+            <h2 style={{ display: mouseEnterH ? "block": "none"}} className="tooltip">{tip1}</h2>
             <h2 className="tooltiptext" onMouseEnter={() => setMouseEnterH(true)} onMouseLeave={()=>setMouseEnterH(false)}>Hover over me</h2>
-            <div style={{ visibility: mouseEnterP ? "visible" : "hidden"}} className="tooltip">{tip2}</div>
+            <p style={{ display: mouseEnterP ? "block": "none"}} className="tooltip">{tip2}</p>
             <p className="tooltiptext" onMouseEnter={() => setMouseEnterP(true)} onMouseLeave={()=>setMouseEnterP(false)}>Hover me to see another tooltip.</p>
         </div>
     );
