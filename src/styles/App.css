@@ -1,8 +1,19 @@
-
-.tooltip{
-    padding: 20px;
-    max-width: 120px;
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltiptext {
+    visibility: visible;
+    width: 150px;
     background-color: red;
     color: white;
+    text-align: center;
+    padding: 20px;
     border-radius: 10px;
-}
+  }
+  
+  .tooltip:hover .tooltiptext {
+    opacity: 1;
+  }
+  

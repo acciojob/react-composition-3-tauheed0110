@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
+import '../styles/App.css';
 
+const Tooltip = ({ text, children }) => {
+  const [visible, setVisible] = useState(false);
 
+  const showTooltip = () => setVisible(true);
+  const hideTooltip = () => setVisible(false);
 
-const Tooltip = ({ tip1, tip2 }) => {
-    const [mouseEnterH, setMouseEnterH] = useState(false);
-    const [mouseEnterP, setMouseEnterP] = useState(false);
-
-    return (
-        <div>
-            <h2 className='tooltip' style={{ visibility: mouseEnterH ? "visible": "hidden"}}>
-                <div className='tooltiptext'>{tip1}</div>
-            </h2>
-            <h2 onMouseEnter={() => setMouseEnterH(true)} onMouseLeave={()=>setMouseEnterH(false)}>Hover over me</h2>
-            <p className='tooltip' style={{ visibility: mouseEnterP ? "visible": "hidden"}}>
-                <div className='tooltiptext'>{tip2}</div>
-            </p>
-            <p onMouseEnter={() => setMouseEnterP(true)} onMouseLeave={()=>setMouseEnterP(false)}>Hover me to see another tooltip.</p>
-        </div>
-    );
-}
+  return (
+    <div 
+      className="tooltip" 
+      onMouseEnter={showTooltip} 
+      onMouseLeave={hideTooltip}
+    >
+      {children}
+      {visible && <div className="tooltiptext">{text}</div>}
+    </div>
+  );
+};
 
 export default Tooltip;
