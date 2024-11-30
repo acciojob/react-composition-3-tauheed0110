@@ -4,14 +4,14 @@ import Tooltip from './Tooltip';
 const App = () => {
   return (
     <div>
-      <Tooltip text="This is a tooltip.">
-        <h2 className="tooltip" style={{ cursor: 'pointer'}}> <div>Hover over me.</div> </h2>
+      <Tooltip text="This is a tooltip">
+        <h2 className="tooltip" style={{ cursor: 'pointer'}}>Hover over me.</h2>
       </Tooltip>
       
       <br /><br />
 
-      <Tooltip text="This is another tooltip.">
-      <p className="tooltip" style={{ cursor: 'pointer'}}> <div>Hover me to see another tooltip.</div> </p>
+      <Tooltip text="This is another tooltip">
+      <p className="tooltip" style={{ cursor: 'pointer'}}>Hover me to see another tooltip.</p>
       </Tooltip>
     </div>
   );
