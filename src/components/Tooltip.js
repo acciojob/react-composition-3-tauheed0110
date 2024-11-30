@@ -9,7 +9,7 @@ const Tooltip = ({ text, children }) => {
 
   return (
     <div>
-      <div 
+      <div className='tooltip'
       onMouseEnter={showTooltip} 
       onMouseLeave={hideTooltip}
     >
